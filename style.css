@@ -1,0 +1,103 @@
+/*
+Theme Name: Parallax!
+Author: Mikey Brandt
+Version: v1.0
+
+*/
+h1{
+	padding: 0;
+	margin: 0;
+}
+.page-wrapper{
+	min-height: 1000px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+}
+.bkpg{
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	min-height: 600px;
+}
+
+.content-padding{
+	width: 960px;
+	margin: 0 auto;
+	min-height: 600px;
+
+}
+.content{
+	padding-top: 100px;
+	width: 960px;
+	background-color: rgba(0,0,0,0.85);
+	min-height: 350px;
+	color: #ccc;
+}
+
+#home{
+	background-image: url(img/bcg_slide-1.jpg);
+	position: fixed;
+	z-index: 1;
+}
+#about{
+	background-color: #888;
+	position: relative;
+	bottom: -1313px;
+	z-index: 2;
+}
+.other-sec{
+	position: relative;
+	z-index: 2;
+	bottom: -1313px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#blank-1{
+	background-image: url(img/bcg_slide-3.jpg);
+	height: 600px;
+}
+#blank-2{
+	background-image: url(img/bcg_slide-4.jpg);
+	height: 600px;
+}
+#blank-3{
+	background-image: url(img/bcg_slide-5.jpg);
+	height: 600px;
+}
+#projects{
+	background-color: #888;
+	
+}
+
+#resume{
+	/*background-image: url(img/bcg_slide-4.jpg);*/
+	background-color: #888;
+
+	
+}
+#contact{
+	/*background-image: url(img/bcg_slide-5.jpg);*/
+	background-color: #888;
+
+}
+#home > .content{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	height: 300px;
+}
+header{
+	margin-bottom: 150px;
+}
+
+.fix-nav{
+	position: fixed;
+	top: 55px;
+	width: 100%;
+}
