@@ -14,15 +14,13 @@ h1{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
-}
-.bkpg{
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 0;
-	min-height: 600px;
-}
+	z-index: 3;
+	position: relative;
 
+}
+.page-wrapper:not(#about){
+	padding-top: 100px;
+}
 .content-padding{
 	width: 960px;
 	margin: 0 auto;
@@ -36,17 +34,29 @@ h1{
 	min-height: 350px;
 	color: #ccc;
 }
+.blank{
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;	
+	position: relative;
+	z-index: 2;
+	margin: -125px 0;
+	height: 800px;
+	/*bottom: -1313px;*/
+}
 
 #home{
-	background-image: url(img/bcg_slide-1.jpg);
+	background-image: url(img/nav_backgroundBLK);
 	position: fixed;
 	z-index: 1;
+	background-position: center 0; 
 }
 #about{
 	background-color: #888;
-	position: relative;
-	bottom: -1313px;
-	z-index: 2;
+	/*position: relative;*/
+	/*bottom: -1313px;*/
+	z-index: 3;
 }
 .other-sec{
 	position: relative;
@@ -56,16 +66,16 @@ h1{
 	background-size: cover;
 }
 #blank-1{
-	background-image: url(img/bcg_slide-3.jpg);
-	height: 600px;
+	background-image: url(img/bcg_slide-2.jpg);
+	/*height: 600px;*/
 }
 #blank-2{
-	background-image: url(img/bcg_slide-4.jpg);
-	height: 600px;
+	background-image: url(img/bcg_slide-1.jpg);
+	/*height: 600px;*/
 }
 #blank-3{
 	background-image: url(img/bcg_slide-5.jpg);
-	height: 600px;
+	/*height: 600px;*/
 }
 #projects{
 	background-color: #888;

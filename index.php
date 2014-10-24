@@ -17,7 +17,7 @@
        	 	<!-- </article> -->
        	</section>
        	 
-       	<section id="about" class="page-wrapper other-sec" data-magic="na" data-s_count="1">
+       	<section id="about" class="page-wrapper" data-magic="na" data-s_count="1">
        	 	<header>
 				<nav class="navbar navbar-inverse" role="navigation">
 				  <div class="container-fluid">
@@ -75,11 +75,11 @@
        	 	</article>
        	</section>
        	 
-       	<section id="blank-1" class="other-sec" data-magic="image" data-s_count="2">
+       	<section id="blank-1" class="blank" data-magic="image" data-s_count="2">
 
        	</section>
 
-       	<section id="projects"class="page-wrapper other-sec" data-magic="na" data-s_count="3">
+       	<section id="projects" class="page-wrapper" data-magic="na" data-s_count="3">
        	 	<article class="content-padding">
        	 		<div class="content">
        	 			<h1>projects</h1>
@@ -92,20 +92,20 @@
        	 		</div>
        	 	</article>
        	</section>
-       	<section id="blank-2" class="other-sec" data-magic="image" data-s_count="4">
+       	<section id="blank-2" class="blank" data-magic="image" data-s_count="4">
 
        	</section>
-       	<section id="resume"class="page-wrapper other-sec" data-magic="na" data-s_count="5">
+       	<section id="resume"class="page-wrapper" data-magic="na" data-s_count="5">
        	 	<article class="content-padding">
        	 		<div class="content">
        	 			<h1>resume</h1>
        	 		</div>
        	 	</article>
        	</section>
-       	<section id="blank-3" class="other-sec" data-magic="image" data-s_count="6">
+       	<section id="blank-3" class="blank" data-magic="image" data-s_count="6">
 
        	</section>       	 
-       	<section id="contact"class="page-wrapper other-sec" data-magic="na" data-s_count="7">
+       	<section id="contact"class="page-wrapper" data-magic="na" data-s_count="7">
        	 	<article class="content-padding">
        	 		<div class="content">
        	 			<h1>contact</h1>

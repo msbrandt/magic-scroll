@@ -1,9 +1,14 @@
 jQuery(function($){
   var windowH = $(window).height(); 
-  var homePg = $('#home'), proPg = $('#projects');
+  var homePg = $('#home'), aboutPg = $('#about'), proPg = $('#projects');
 
   homePg.height(windowH);
+  // aboutPg.css('bottom', -windowH);
   proPg.height(windowH);
+
+  $('.page-wrapper').not('#home').css('bottom', -windowH);
+  $('.blank').css('bottom', -windowH);
+
 
   var sections = $('section'), c = sections.length;
   var imgAry = [], contentAry = [], locateAry = [];
@@ -16,30 +21,32 @@ jQuery(function($){
     locateAry.push(currentTop);
 
     if(  currentSec == 'image' ){
-      var tempName = currentDiv;
-      imgAry.push(tempName);
+      imgAry.push(currentDiv);
 
     }else if( currentSec == 'na' ){
-      var tempName = currentDiv;
-      contentAry.push(tempName);
+      contentAry.push(currentDiv);
 
     }
   }
 
 
-  console.log($('#about').height());
 
   function magicScroll(images, content, locations){
-  	var st = $(window).scrollTop();
-  	var wh = $(window).height();
-    var fade = st,
-     op = 0,
-     fadeSt = 50,
-     fadeEnd = 1000;
+    var st = $(window).scrollTop();
+    var wh = $(window).height();
+    var aboutScroll = st + wh;
+
+
+
+    var op = 0,
+        fadeSt = 50,
+        fadeEnd = 1000;
 
 
     // var backPos = st / 1.75;
     var backPos = st / 10;
+
+
   	var backPos2 = st / 5;
   	
     var projPos = st / 2.75;
@@ -49,92 +56,69 @@ jQuery(function($){
 
   	var projScroll = st / 6;
 
-    var firstSec = $(images[0]), secondSec = $(contentAry[0]), hero = firstSec.children();
-    // var g = locations[3].offset().top;
-    // var b = $(images[1]).offset().top;
-    var aboutB = secondSec.height();
-
-    // console.log(locations);
-    // console.log($('#about').height());
-    // console.log(st);
-
-    console.log(aboutB + ' ' + st);
-
-    // var aboutB = secondSec.height();
-
+    var homeSec = $(images[0]), aboutSec = $(contentAry[0]), hero = homeSec.children();
     
-    if(st<=fadeSt){
-     op = 1;
-    }else if(st<=fadeEnd){
-     op = 1 - st / fadeEnd;
-    }
-
-    firstSec.css('background-position', '0px '+ -backPos +'px');
-    hero.css({"transform" : "translate(0px, "+ -translateVal +"px", "opacity": op});
-    // secondSec.css("transform", "translate(0px, "+ -translateVal +"px");
+    var img_section_home = $(images[0]),
+        img_section_1 = $(images[1]),
+        img_section_2 = $(images[2]),
+        img_section_3 = $(images[3]);
+   
+    var content_about = $(contentAry[0]),
+        content_proj = $(contentAry[1]),
+        content_resum = $(contentAry[2]),
+        content_contact = $(contentAry[3]);
     
-    // for(var x=1; x<images.length; x++){
-    //   var thisS = $(images[x]);
-    //   thisS.css('background-position', '0px -'+ backPos2 +'px');
-    // //   // images[x].css('background-position', '0px -'+ backPos +'px');
-
-    // }  
-    // console.log('st: ' + st + ' ab: ' + aboutB);
-    if( aboutB < st ){
-      console.log('aboutB'); 
-
-    }
-    //   console.log('thiss');
-    // }
-    // images.style.backgroundPosition = "0px, "+ -backPos +'px';
-
-  	
-
-
-  	// var nav = $('.navbar-inverse');
-  	// var pg = $('#home');
-  	// var abpg = $('#about');
-  	// var prpg = $('#projects');
-  	// var respg = $('#resume');
-  	// var conpg = $('#contact');
-  	// var blkpg = $('#blank-1');
-
-  	// var aboutBottom = abpg.offset().top - abpg.height();
-  	// var projectTop = prpg.offset().top;
-
-  	// // console.log(aboutBottom + ' ' + st);
-
-  	// var firstPg = document.getElementById('home'),
-  	// 	aboutPg = document.getElementById('about'),
-  	// 	blankpg = document.getElementById('blank-1'),
-  	// 	projectsPg = document.getElementById('projects'),
-  	// 	resumePg = document.getElementById('resume'),
-  	// 	contactPg = document.getElementById('contact'),
-  	// 	hero = document.getElementById('home-content');
-
-   //  var backgroundDiv = $('.background-div');
-   //  var translateDiv = $('.no-background-div');
-
+    var aboutB = content_about.height(),
+        projB = (content_proj.height() + content_about.offset().top)+350;
     
-  	
-  	// // hero.addClass('move-elm');
-  	// // firstPg.style.backgroundPosition = "0px, "+ -backPos +'px';
-  	// // firstPg.style.transform = "translate(0px, " + -backPos + "px";
-  	// pg.css('background-position', '0px '+ -backPos +'px');
-  	// hero.style.transform = "translate(0px, "+ translateVal +"px)";
-  	// aboutPg.style.transform = "translate(0px, "+ -translateVal +"px)";
-  	// blankpg.style.transform = "translate(0px, "+ -translateVal +"px)";
-  	// projectsPg.style.transform = "translate(0px, "+ -translateVal +"px)";
-  	// resumePg.style.transform = "translate(0px, "+ -translateVal +"px)";
-  	// contactPg.style.transform = "translate(0px, "+ -translateVal +"px)";
+    // var backPos3 = 0;
 
-  	// if(aboutBottom < st){
-  	// 	blkpg.css('background-position', '0px '+ -projPos +'px');
-  	
-  	// }
+    // var x = $('#blank-1').scrollTop();
+        // console.log(aboutScroll);
+        // console.log('back: ' +backPos);
+        // console.log('scrollTop: '+st+' wh: '+wh);
 
-  	// hero.style.opacity = op;
-  	// // console.log(hero);
+      if(st<=fadeSt){
+        op = 1;
+      }else if(st<=fadeEnd){
+        op = 1 - st / fadeEnd;
+      }
+      homeSec.css("transform", 'matrix(1, 0, 0, 1, 0, '+ -backPos + ')');
+      hero.css({"transform": 'matrix(1, 0, 0, 1, 0, '+ -backPos2 + ')', 'opacity': op});
+      // firstSec.css('background-position', 'center '+ -backPos +'px');
+      // hero.css({"transform" : "translate(0px, "+ -translateVal +"px", "opacity": op});
+      
+      if( st > aboutB ){
+        // var newSt = (st - wh) - 650;
+        var newBackPos = ((st - wh)/10)-100;
+
+
+        // console.log(x);
+        var newSt = backPos - 100;
+        var newSt2 = backPos2 - 120;
+        // var newSt = 5;
+        // console.log('new st: ' +newSt);
+        // console.log('backPos');
+        // var backPos3 = newSt/10;
+        // console.log('new back: '+newSt + ' screen top: ' + st);
+        // console.log(backPos3 + " : " + backPos);
+        // console.log(st + " " + wh + " " + aboutB);
+        img_section_1.css("transform", 'matrix(1, 0, 0, 1, 0, '+ -newBackPos + ')');
+        // content_proj.css("transform", 'matrix(1, 0, 0, 1, 0, '+ -newSt2 + ')');
+        // img_section_1.css('background-position', 'center '+ -backPos3 +'px');
+      }
+      if ( st > projB ){
+        var newBackPos = ((st - (wh*1.5))/10)-100;
+        console.log('newBackPos');
+
+        img_section_2.css("transform", 'matrix(1, 0, 0, 1, 0, '+ -newBackPos + ')');
+
+
+
+      }
+      // console.log(st);
+
+
 
   };
 
