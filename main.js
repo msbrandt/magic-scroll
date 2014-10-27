@@ -4,7 +4,7 @@ jQuery(function($){
 
   homePg.height(windowH);
   // aboutPg.css('bottom', -windowH);
-  proPg.height(windowH);
+  // proPg.height(windowH);
 
   $('.page-wrapper').not('#home').css('bottom', -windowH);
   $('.blank').css('bottom', -windowH);
@@ -109,7 +109,7 @@ jQuery(function($){
       }
       if ( st > projB ){
         var newBackPos = ((st - (wh*1.5))/10)-100;
-        console.log('newBackPos');
+        // console.log('newBackPos');
 
         img_section_2.css("transform", 'matrix(1, 0, 0, 1, 0, '+ -newBackPos + ')');
 

@@ -81,15 +81,19 @@
 
        	<section id="projects" class="page-wrapper" data-magic="na" data-s_count="3">
        	 	<article class="content-padding">
-       	 		<div class="content">
-       	 			<h1>projects</h1>
-       	 			<ul>
-       	 				<li>proj 1</li>
-       	 				<li>proj 2</li>
-       	 				<li>proj 3</li>
-       	 				<li>proj 4</li>
-       	 			</ul>
-       	 		</div>
+                            <?php 
+
+                                   $new_query = new WP_Query( 'category_name=myprojects' );
+                                   
+                                   if( have_posts() ) {
+                                          while ( $new_query->have_posts() ) { 
+                                                 $new_query->the_post();
+                                                 the_content();
+                                          } 
+                                   };
+                                                   
+
+                            ?>
        	 	</article>
        	</section>
        	<section id="blank-2" class="blank" data-magic="image" data-s_count="4">

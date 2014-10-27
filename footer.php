@@ -12,6 +12,7 @@
 </div>
 
 	<script src="<?php echo get_template_directory_uri();?>/main.js"></script>
+	<script src="<?php echo get_template_directory_uri();?>/public.js"></script>
 
 
 	<?php  wp_footer(); ?>

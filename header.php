@@ -21,6 +21,7 @@
 <link href='https://fonts.googleapis.com/css?family=Exo+2:500italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' );?>/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' );?>/style.css">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' );?>/proj_styles.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <script src="<?php echo get_template_directory_uri(); ?>/bootstrap.min.js"></script>
